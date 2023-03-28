@@ -16,13 +16,9 @@
 }
 
 body {
-  font-family: var(--font-primary);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
-}
-
-p {
-  color: var(--color-on-surface);
+  font-family: $font-primary;
+  color: $color-text-primary;
+  background-color: $color-bg-primary;
 }
 
 // Typography
