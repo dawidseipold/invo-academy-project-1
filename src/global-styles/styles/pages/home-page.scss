@@ -1,0 +1,115 @@
+#home-page {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+
+  @include mq(tablet) {
+    padding: 6rem;
+  }
+
+  @include mq(desktop) {
+    padding: 12rem 8rem;
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+}
+
+.column {
+  padding: 1rem;
+
+  &--text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  &--cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    list-style: none;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+
+    @include mq(tablet) {
+      column-gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0;
+  }
+}
+
+.card {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--rounding-medium);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rounding-small);
+
+    @include mq(desktop) {
+      width: 64px;
+      height: 64px;
+    }
+
+    &--purple {
+      background-color: #373155;
+
+      svg {
+        stroke: var(--color-accent-purple);
+      }
+    }
+
+    &--blue {
+      background-color: #2c3455;
+
+      svg {
+        stroke: var(--color-accent-blue);
+      }
+    }
+
+    &--cyan {
+      background-color: #274255;
+
+      svg {
+        stroke: var(--color-accent-cyan);
+      }
+    }
+
+    &--yellow {
+      background-color: #3d413f;
+
+      svg {
+        stroke: var(--color-accent-yellow);
+      }
+    }
+  }
+
+  &__title {
+  }
+
+  &__description {
+    margin: 0;
+    color: rgba(#fff, 0.5);
+  }
+}
